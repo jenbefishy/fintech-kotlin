@@ -48,6 +48,7 @@ suspend fun getNews(
                 allNews.addAll(newsResponse.results)
             } catch (e: Exception) {
                 logger.error("Failed to fetch news for page $page", e)
+                continue;
             }
         }
     } catch (e: Exception) {
